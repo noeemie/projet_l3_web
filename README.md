@@ -1,6 +1,8 @@
 projet web l3
 
-idées :
-- meteo 
-- circuit des 24H => evenements
-- geolocalisation
+idées : 
+- API F1 pour récupérer les statistiques d'une course donnée
+- API twitter pour récupérer les dernières infos officielles
+- API météo pour récupérer les conditions météos de la course
+- On croise des données entre la position des pilotes et de la météo lors de la course pour voir quels pilotes sont meilleurs dans quels conditions météorologiques. (BDD)
+Lien GitHub : https://github.com/noeemie/projet_l3_web
