@@ -1,0 +1,31 @@
+body {
+	padding-top : 10px;
+	background-image : url("Images/circuit_24h.png");
+	background-repeat : no-repeat;
+	background-size:cover;
+}
+
+nav {
+	background-color : lightyellow;
+}
+
+[class*="col"] {
+
+	background-color : lightyellow;
+	border : 5px solid red;
+	border-radius : 20px;
+	line-height : 20px;
+	text-align : center;
+	margin-top : 30px;
+}
+
+strong {
+	color : #E00;
+}
+
+em {
+	font-size : 0.8em;
+	color : blue;
+}
+
+

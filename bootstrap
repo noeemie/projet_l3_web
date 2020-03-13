@@ -1,0 +1,117 @@
+BOOTSTRAP 4
+
+Bootstrap : ensemble de fonctionnalités CSS et JS pour aider à créer des pages web
+
+Classes :
+
+Blocs : 
+	row : classe représentant une rangée
+	col-1 ... col-12 : 1 à 12 colonnes de très petite taille (smartphones)
+	col-sm-1 ... col-sm-12 : 1 à 12 colonnes de petite taille (tablettes)
+	col-md-1 ... col-md-12 : 1 à 12 colonnes de taille moyenne (ordinateurs portables)
+	col-lg-1 ... col-lg-12 : 1 à 12 colonnes de grande taille (ordinateurs fixes)
+	col-xl-1 ... col-xl-12 : 1 à 12 colonnes de très grande taille (écrans géants)
+	supprimer les marges : no-gutters
+	container-taille (ou container-fluid) : classe dans laquelle mettre ses composantes pour avoir des marges automatiques et une redimension automatique
+	col-taille-auto : adaptation automatique du nombre de colonnes
+	w-25/50/75/100 : taille 25/50/75/100 % de l'écran
+	{propriété}{côtés}-{support optionnel}-taille : sauter des colonnes
+	1) La propriété définit le type :
+		m : marge
+		p : remplissage (padding)
+	2) Les côtés définissent la position :
+		t : haut (top)
+		r : droite (right)
+		b : bas (bottom)
+		l : gauche (left)
+		x : gauche et droite (axe x)
+		y : haut et bas (axe y)
+	order-taille-nombre : changer l'ordre d'apparition
+	
+Alignement : 
+	align-items-taille-start/center/end : alignement des blocs en haut/au centre/en bas
+	align-self-taille-start/center/end : même chose mais pour chaque bloc séparément
+	justify-content-taille-start/center/end/around/between : aligner des blocs à gauche/au centre/à droite/espacés de manière égale sans toucher aux bords/en touchant aux bords
+	d-taille-none/inline/inline-block/block/table/table-cell/table-row/flex/inline-flex : différents alignements de blocs (none : supprimer un bloc, utile pour petits écrans)
+	
+Texte : 
+	text-muted : texte écrit en plus petit et en gris
+	display-1/2/3/4 : titre encore plus gros (4...1 petit...gros)
+	lead : texte de paragraphe plus gros
+	blockquote : mise en forme de citation (utiliser des balises <blockquote> </blockquote>)
+	blockquote-footer : pied de page d'une citation
+	balise <abbr> </abbr> : pour la définition complète des abbréviations
+	initialism : permet d'avoir une police légèrement plus petite
+	text-truncate : tronquer le texte s'il ne rentre pas
+	text-left/right/center/justify/nowrap : texte aligné à gauche/droite/centre/justifié/pas de retour à la ligne
+	text-uppercase/lowercase/capitalize : met le texte en majuscules/minuscules/première lettre en majuscule
+	text-muted/primary/secondary/success/info/warning/danger/white/dark : texte écrit en gris/bleu foncé/gris clair/vert/bleu clair/orange/rouge/blanc/noir
+	bg-muted/.../dark : même chose mais pour l'arrière-plan
+	
+Marges : 
+
+{propriété}{côtés optionnels}-{support optionnel}-{dimension}
+1) La propriété définit le type :
+    m : marge
+    p : remplissage (padding)
+2) Les côtés définissent la position :
+    t : haut (top)
+    r : droite (right)
+    b : bas (bottom)
+    l : gauche (left)
+    x : gauche et droite
+    y : haut et bas
+3) Le dernier élément définit la valeur :
+    0 : aucune valeur
+    …
+    6 : valeur maximale
+	
+Listes : 
+	list-unstyled : pour retirer les puces sur les listes
+	list-inline : pour une organisation en ligne (sans retour à la ligne entre chaque item)
+	list-group/list-group-item
+
+Tableaux : 
+	table : ajoute des bordures horizontales au tableau et un style sobre
+	table-sm : réduit la largeur verticale des lignes
+	table-bordered : ajoute des bordures verticales au tableau
+	table-striped : grise une ligne sur 2
+	table-hover : ligne mise en évidence au survol de la souris
+	table-dark/light : tableau sur fond noir/gris
+	thead-dark/light : titre sur fond noir/gris
+	table-responsive-taille : fait apparaître une barre de défilement en-dessous d'une certaine taille
+	table-success/warning/danger/active/info/primary/secondary/light/dark : fond de ligne en vert/jaune/rouge/gris/bleu/bleu foncé/marron/blanc/gris foncé (+ texte blanc)
+
+Formulaires : 
+	form-control : aligne les champs des formulaires les uns en dessous des autres et améliore l'apparence
+	form-group : mise en forme supplémentaire qui aère les champs
+	custom-select : classe qui améliore l'apparence des listes à choix
+	form-inline : formulaire disposé en ligne
+	radio/checkbox : mise en forme automatique pour les champs de formulaire radio et checkbox
+	btn : mise en forme du bouton
+	btn-success/warning/danger/active/info/primary/secondary/light/dark : fond de bouton en vert/jaune/rouge/gris/bleu/bleu foncé/marron/blanc/gris foncé (+ texte blanc)
+	control-label : alignement à droite des étiquettes
+	sr-only : étiquette invisible
+	input-group : accoler un label à un champ de saisie
+	
+Navigation : 
+	nav/nav-item/nav-link : classes à ajouter aux balises ul/li/a pour gérer des liens
+	disabled : marquer un lien comme désactivé
+	active : marquer un lien comme actif
+	navbar : classe pour améliorer l'apparence d'une barre de navigation
+	bg-success/warning/danger/active/info/primary/secondary/light/dark : changer le fond de la barre en vert/jaune/rouge/gris/bleu/bleu foncé/marron/blanc/gris foncé (+ texte blanc)
+	navbar-light/dark : permet d'avoir un texte sombre pour fond clair/clair pour fond sombre
+	ml-auto : positionner les éléments à droite
+	navbar-brand : texte plus gros
+	fixed-top/bottom : positionne la barre en haut/bas de la page
+	sticky-top : barre qui reste fixe en haut
+	pagination-taille/page-item/page-link : à ajouter aux balises ul/li/a pour ajouter une pagination
+	breadcrumb-taille/breadcrumb-item : à ajouter aux balises ol/li pour une aide à la navigation
+	
+Alertes : 
+	alert + alert-success/warning/danger/active/info/primary/secondary/light/dark : met le texte en évidence et ajoute une couleur vert/jaune/rouge/gris/bleu/bleu foncé/marron/blanc/gris foncé (+ texte blanc)
+	alert-heading : pareil pour le titre
+	
+Etiquettes : 
+	badge + badge-success/warning/danger/active/info/primary/secondary/light/dark : met le texte sous forme d'étiquette + couleur vert/jaune/rouge/gris/bleu/bleu foncé/marron/blanc/gris foncé (+ texte blanc)
+	label-pill : arrondit les bords
