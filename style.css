@@ -6,12 +6,12 @@ body {
 }
 
 nav {
-	background-color : lightyellow;
+	background-color : lightgray;
 }
 
 [class*="col"] {
 
-	background-color : lightyellow;
+	background-color : lightgrey;
 	border : 5px solid red;
 	border-radius : 20px;
 	line-height : 20px;
