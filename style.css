@@ -9,12 +9,13 @@ nav {
 	background-color : #343a40;
 }
 
+
 [class*="col"] {
 
 	color : white;
 	background-color : #343a40;
 	border : 5px solid red;
-	border-radius : 20px;
+	border-radius : 10px;
 	line-height : 20px;
 	text-align : center;
 	margin-top : 30px;

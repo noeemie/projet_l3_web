@@ -22,6 +22,7 @@ ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Vic
     // Récupération de certains résultats
     console.log(meteo.city_name);
     console.log(meteo.data[0].wind_gust_spd);
+    // !!! Penser à faire : afficher dans la console le nombre de requêtes restantes (si possible)
     /*var temperature = meteo.current_observation.temp_c;
     var humidite = meteo.current_observation.relative_humidity;
     var imageUrl = meteo.current_observation.icon_url;
