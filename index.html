@@ -22,6 +22,7 @@
 					</h1>
 				</div>
 				
+				<!-- Sélection de la langue -->
 				<div class="col-6 col-md-2">
 					<form>
 						<div class="">
@@ -37,10 +38,24 @@
 		
 			<!-- Section 1 -->
 			<section class="row justify-content-around">
-				<div class="col-3 d-none d-xl-block"> 
-					<img src="Images/soleil.png" alt="soleil" class="img-fluid"> </img>
+			
+				<!-- Temps réel -->
+				<div class="col-12 col-sm-5 col-md-4 col-lg-3"> 
+					<img id ="temps_actuel" src="#" alt="" class="img-fluid"> </img>
+					<table class="table table-dark table-striped table-sm table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>Temp</th>
+								<th>Pluie</th>
+								<th>Vent</th>
+							</tr>
+						</thead>
+						<tbody id = "temps"> </tbody>
+					</table>
 				</div>
-				<div class="col-12 col-xl-8 table-responsive">
+				
+				<!-- Prévisions -->
+				<div class="col-12 col-sm-6 col-md-7 col-lg-8 table-responsive">
 					<h2> 
 						<span class="fa">
 							<i class="fa fa-thermometer-half"></i>
@@ -50,45 +65,19 @@
 					<table class="table table-dark table-striped table-sm table-bordered table-hover">
 						<thead>
 							<tr>
-								<th></th>
-								<th>Tmin °C</th>
-								<th>Tmax °C</th>
-								<th>Pluie mm</th>
-								<th>Vent dir</th>
-								<th>Vent raf km/h</th>
+								<th>Date</th>
+								<th>Tmin</th>
+								<th>Tmax</th>
+								<th>Pluie</th>
+								<th>Vent</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td>Samedi</td>
-								<td>6</td>
-								<td>12</td>
-								<td>1,8 mm</td>
-								<td>SO</td>
-								<td>40</td>
-							</tr>
-							<tr>
-								<td>Dimanche</td>
-								<td>4</td>
-								<td>12</td>
-								<td>0 mm</td>
-								<td>S</td>
-								<td>40</td>
-							</tr>
-							<tr>
-								<td>Lundi</td>
-								<td>3</td>
-								<td>13</td>
-								<td>0 mm</td>
-								<td>N</td>
-								<td>20</td>
-							</tr>
-						</tbody>
+						<tbody id = "previsions"> </tbody>
 					</table>
 				</div>
 			</section>
 			
-			<!-- Section 2 -->
+			<!-- Section 2 (Twitter) -->
 			<section class="row">
 				<div class="col-12">
 					<h2> 
@@ -103,7 +92,7 @@
 				</div>
 			</section>
 			
-			<!-- Section 3 -->
+			<!-- Section 3 (Classements) -->
 			<section class="row justify-content-around">
 			
 				<!-- Sous-section 1 (soleil) -->
@@ -114,7 +103,7 @@
 							<i class="fa fa-sun-o"></i>
 						</span>
 					</h3>
-					<!-- À remplacer par les données de l'API -->
+					
 					<table class="table table-dark table-striped table-sm table-bordered table-hover">
 						<thead>
 							<tr>
