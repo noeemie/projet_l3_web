@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const Thing = require('./models/Thing');
+
 mongoose.connect('mongodb+noemie_farizon://jimbob:Chouquette72@cluster0-pme76.mongodb.net/test?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -16,78 +18,41 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    
-    next();
-});
+// app.post('/api/tableau', (req, res, next) => {
+//     const thing =  new Thing({
+//         ...req.body
+//     });
+//     thing.save()
+//         .then(() => res.status(201).json({message: 'Objet enregistré !'}))// 201 = code création reussi
+//         .catch(error => res.status(400).json({ error }));// 400 = code erreur
+//     next();
+// });
 
 app.use('/api/tableau', (req, res, next) => {
-    const tableaux = [
-        {
-            _id: 'soleil',
-            title: 'Classement - Soleil',
-            classement: [
-                {
-                    position: 1,
-                    pilote: 'machin',
-                    temps: '1,023',
-                },
-                {
-                    position: 2,
-                    pilote: 'machine',
-                    temps: '1,023',
-                },
-                {
-                    position: 3,
-                    pilote: 'michel',
-                    temps: '1,023',
-                },
-            ],
-        },
-        {
-            _id: 'pluie',
-            title: 'Classement - Pluie',
-            classement: [
-                {
-                    position: 1,
-                    pilote: 'machin',
-                    temps: '1,023',
-                },
-                {
-                    position: 2,
-                    pilote: 'machine',
-                    temps: '1,023',
-                },
-                {
-                    position: 3,
-                    pilote: 'michel',
-                    temps: '1,023',
-                },
-            ],
-        },
-        {
-            _id: 'vent',
-            title: 'Classement - Vent',
-            classement: [
-                {
-                    position: 1,
-                    pilote: 'machin',
-                    temps: '1,023',
-                },
-                {
-                    position: 2,
-                    pilote: 'machine',
-                    temps: '1,023',
-                },
-                {
-                    position: 3,
-                    pilote: 'michel',
-                    temps: '1,023',
-                },
-            ],
-        },
-    ];
-    res.status(200).json(tableaux);
+    // methode en dur
+    // const tableaux = [
+    //     {
+    //         _id: 'soleil',
+    //         title: 'Classement - Soleil',
+    //         classement: 'bla',
+    //     },
+    //     {
+    //         _id: 'pluie',
+    //         title: 'Classement - Pluie',
+    //         classement: 'bla',
+    //     },
+    //     {
+    //         _id: 'vent',
+    //         title: 'Classement - Vent',
+    //         classement: 'bla',
+    //     },
+    // ];
+    // res.status(200).json(tableaux);
+
+    // methode en allant chercher dans la bdd
+    Thing.find()
+        .then(things => res.status(200).json(things))
+        .catch(error => res.status(400).json({ error }));
 });
 
 module.exports = app;
