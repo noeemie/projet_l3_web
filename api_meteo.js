@@ -47,7 +47,7 @@ ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Vic
 });
 
 // Traitement des données issues du temps actuel
-ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Victoria&key=2efb0738c35141ef9ee890c303f25215", function (reponse) {
+ajaxGet("https://api.weatherbit.io/v2.0/current?city=Melbourne&state=Victoria&key=2efb0738c35141ef9ee890c303f25215", function (reponse) {
 
     var meteo = JSON.parse(reponse);
     
@@ -63,6 +63,6 @@ ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Vic
     "<tr>" + 
 	"	<td>" + meteo.data[0].temp + "°C</td>" + // Température
 	"	<td>" + Math.round(meteo.data[0].precip) + " mm</td>" + // Pluie
-	"	<td>" + Math.round(meteo.data[0].wind_gust_spd * 3.6) + " km/h " + meteo.data[0].wind_cdir + "</td>" + // Vent (vitesse + direction)
+	"	<td>" + Math.round(meteo.data[0].wind_spd * 3.6) + " km/h " + meteo.data[0].wind_cdir + "</td>" + // Vent (vitesse + direction)
 	"</tr>"
 });
