@@ -63,6 +63,6 @@ ajaxGet("https://api.weatherbit.io/v2.0/current?city=Melbourne&state=Victoria&ke
     "<tr>" + 
 	"	<td>" + meteo.data[0].temp + "°C</td>" + // Température
 	"	<td>" + Math.round(meteo.data[0].precip) + " mm</td>" + // Pluie
-	"	<td>" + Math.round(meteo.data[0].wind_spd * 3.6) + " km/h " + meteo.data[0].wind_cdir + "</td>" + // Vent (vitesse + direction)
+	"	<td>" + Math.round(meteo.data[0].wind_spd * 7.2) + " km/h " + meteo.data[0].wind_cdir + "</td>" + // Vent (vitesse + direction)
 	"</tr>"
 });

@@ -2,9 +2,10 @@
 <html lang="fr">
 
 	<head>
-		<title> F1 - résultats et prévisions </title>
+		<title> Info Formule 1 </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Adaptation pour Smartphones -->
+		<link rel="icon" type="image/png" href="/Images/logo.png" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- Chargement de Bootstrap sur CDN -->
 		<link rel="stylesheet" href="style.css"> <!-- Quelques personnalisations -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Chargement des icones -->
@@ -16,24 +17,11 @@
 		
 			<!-- En-tête -->
 			<header class="row justify-content-between">
-				<div class="col-12 col-md-10">
+				<div class="col-12">
 					<h1 class="text-uppercase"> 
-						<strong> F1</strong> <em> résultats et prévisions </em> 
+						 <strong> Info </strong> <em> Formule 1 </em>
 					</h1>
-				</div>
-				
-				<!-- Sélection de la langue -->
-				<div class="col-6 col-md-2">
-					<form>
-						<div class="">
-							<select class="form-control custom-select">
-								<option> FR </option>
-								<option> EN </option>
-							</select>
-						</div>
-					</form>
-  				</div>
-  				
+				</div>	
 			</header>
 		
 			<!-- Section 1 -->
@@ -46,8 +34,8 @@
 						<thead>
 							<tr>
 								<th>Temp</th>
-								<th>Pluie</th>
-								<th>Vent</th>
+								<th>Rain</th>
+								<th>Wind</th>
 							</tr>
 						</thead>
 						<tbody id = "temps"> </tbody>
@@ -60,7 +48,7 @@
 						<span class="fa">
 							<i class="fa fa-thermometer-half"></i>
 						</span>
-						Prévisions 
+						Forecasts 
 					</h2>
 					<table class="table table-dark table-striped table-sm table-bordered table-hover">
 						<thead>
@@ -68,8 +56,8 @@
 								<th>Date</th>
 								<th>Tmin</th>
 								<th>Tmax</th>
-								<th>Pluie</th>
-								<th>Vent</th>
+								<th>Rain</th>
+								<th>VWind</th>
 							</tr>
 						</thead>
 						<tbody id = "previsions"> </tbody>
@@ -85,7 +73,7 @@
   							<i class="fa fa-square-o fa-stack-2x"></i>
   							<i class="fa fa-twitter fa-stack-1x"></i>
 						</span>
-						Sur Twitter
+						On Twitter
 					</h2>
 					<a class="twitter-timeline" data-width="1500" data-height="500" data-theme="dark" href="https://twitter.com/F1?ref_src=twsrc%5Etfw">Tweets by F1</a> 
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -98,7 +86,7 @@
 				<!-- Sous-section 1 (soleil) -->
 				<div class="col-12 col-sm-3 table-responsive">
 					<h3> 
-						Classement - Soleil 
+						Leaderboard - Sun 
 						<span class="fa">
 							<i class="fa fa-sun-o"></i>
 						</span>
@@ -108,8 +96,8 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Pilote</th>
-								<th>Temps</th>
+								<th>Pilot</th>
+								<th>Time</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -135,7 +123,7 @@
 				<!-- Sous-section 2 (pluie) -->
 				<div class="col-12 col-sm-3 table-responsive">
 					<h3> 
-						Classement - Pluie 
+						Leaderboard - Rain
 						<span class="fa">
 							<i class="fa fa-tint"></i>
 						</span>
@@ -145,8 +133,8 @@
 						<thead class="table-dark">
 							<tr>
 								<th>#</th>
-								<th>Pilote</th>
-								<th>Temps</th>
+								<th>Pilot</th>
+								<th>Time</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -172,7 +160,7 @@
 				<!-- Sous-section 3 (vent) -->
 				<div class="col-12 col-sm-3 table-responsive">
 					<h3> 
-						Classement - Vent 
+						Leaderboard - Wind
 						<span class="fa">
   							<i class="fa fa-flash"></i>
 						</span>
@@ -182,8 +170,8 @@
 						<thead class="table-dark">
 							<tr>
 								<th>#</th>
-								<th>Pilote</th>
-								<th>Temps</th>
+								<th>Pilot</th>
+								<th>Time</th>
 							</tr>
 						</thead>
 						<tbody>
