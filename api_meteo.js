@@ -43,6 +43,20 @@ ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Vic
 	"	<td>" + meteo.data[2].max_temp + "°C</td>" +
 	"	<td>" + Math.round(meteo.data[2].precip) + " mm</td>" +
 	"	<td>" + Math.round(meteo.data[2].wind_gust_spd * 3.6) + " km/h " + meteo.data[2].wind_cdir + "</td>" +
+	"</tr>" +
+	"<tr>" + 
+	"	<td>" + meteo.data[3].datetime + "</td>" +
+	"	<td>" + meteo.data[3].min_temp + "°C</td>" +
+	"	<td>" + meteo.data[3].max_temp + "°C</td>" +
+	"	<td>" + Math.round(meteo.data[3].precip) + " mm</td>" +
+	"	<td>" + Math.round(meteo.data[3].wind_gust_spd * 3.6) + " km/h " + meteo.data[3].wind_cdir + "</td>" +
+	"</tr>" +
+	"<tr>" + 
+	"	<td>" + meteo.data[4].datetime + "</td>" +
+	"	<td>" + meteo.data[4].min_temp + "°C</td>" +
+	"	<td>" + meteo.data[4].max_temp + "°C</td>" +
+	"	<td>" + Math.round(meteo.data[4].precip) + " mm</td>" +
+	"	<td>" + Math.round(meteo.data[4].wind_gust_spd * 3.6) + " km/h " + meteo.data[4].wind_cdir + "</td>" +
 	"</tr>";
 });
 
@@ -65,4 +79,8 @@ ajaxGet("https://api.weatherbit.io/v2.0/current?city=Melbourne&state=Victoria&ke
 	"	<td>" + Math.round(meteo.data[0].precip) + " mm</td>" + // Pluie
 	"	<td>" + Math.round(meteo.data[0].wind_spd * 7.2) + " km/h " + meteo.data[0].wind_cdir + "</td>" + // Vent (vitesse + direction)
 	"</tr>"
+	
+	// Date et heure de l'observation
+	document.getElementById("heure_observation").innerHTML = 
+	"<p> Last observation time : " + meteo.data[0].ob_time + "</p>";
 });
