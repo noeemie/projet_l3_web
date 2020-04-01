@@ -16,7 +16,7 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
-// Traitement des données du fichier JSON reçu depuis l'API weatherbit pour les prévisions des 3 prochains jours pour Melbourne
+// Traitement des données du fichier JSON reçu depuis l'API weatherbit pour les prévisions des 5 prochains jours pour Melbourne
 ajaxGet("https://api.weatherbit.io/v2.0/forecast/daily?&city=Melbourne&state=Victoria&key=2efb0738c35141ef9ee890c303f25215", function (reponse) {
 
     var meteo = JSON.parse(reponse);
