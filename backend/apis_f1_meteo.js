@@ -30,7 +30,7 @@ ajaxGet("http://ergast.com/api/f1/current/results.json", function (reponse) {
     document.getElementById("localisation").innerHTML = nom + " - " + ville + " (" + pays + ")";
     document.getElementById("titre_classement").innerHTML = nom + " leaderboard";
     var urlPrevisions = "https://api.weatherbit.io/v2.0/forecast/daily?&lat=" + latitude + "&lon=" + longitude + "&key=2efb0738c35141ef9ee890c303f25215";
-    var urlTempsActuel = "https://api.weatherbit.io/v2.0/current?&lat=" + latitude + "&lon=" + longitude + "&key=2efb0738c35141ef9ee890c303f25215";
+	var urlTempsActuel = "https://api.weatherbit.io/v2.0/current?&lat=" + latitude + "&lon=" + longitude + "&key=2efb0738c35141ef9ee890c303f25215";
     
     // Affichage du classement du dernier grand prix
     var classement = "";

@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 // middlewear pour enregister un commentaire d'utilisateur
-app.post('/api', (req, res, next) => {
+app.post('/index', (req, res, next) => {
   const thing =  new Thing({
      ...req.body
   });
@@ -30,19 +30,19 @@ app.post('/api', (req, res, next) => {
 });
 
 // affichage des commentaires
-app.use('/api', (req, res, next) => {
+app.use('/index', (req, res, next) => {
   // methode en allant chercher dans la bdd
   Thing.find()
       .then(avis => res.status(200).json(avis))
       .catch(error => res.status(400).json({ error }));
 });
 
-// pour faire les palmares des pilotes
-app.use('/api', (req, res, next) => {
-  Thing.find()
-      .then(meilleur => res.status(200).json(meilleur))
-      .catch(error => res.status(400).json({ error }));
-  next();
-});
+// // pour faire les palmares des pilotes
+// app.use('/api', (req, res, next) => {
+//   Thing.find()
+//       .then(meilleur => res.status(200).json(meilleur))
+//       .catch(error => res.status(400).json({ error }));
+//   next();
+// });
 
 module.exports = app;
