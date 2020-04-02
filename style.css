@@ -21,6 +21,11 @@ nav {
 	margin-top : 30px;
 }
 
+#conteneur {
+	background : transparent;
+	border : transparent;
+}
+
 strong {
 	color : #E00;
 }
@@ -40,8 +45,16 @@ em {
 	text-align : justify;
 }
 
+#formulaire {
+	height : 300px;
+}
+
 #liste_commentaires {
 	height : 300px;
+}
+
+#classement {
+	height : 400px;
 }
 
 

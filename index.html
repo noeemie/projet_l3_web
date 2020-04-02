@@ -31,7 +31,7 @@
 				<!-- Temps réel -->
 				<div class="col-12 col-sm-6 col-md-5 col-lg-4"> 
 					<h2> Actual weather </h2>
-					<img id ="temps_actuel" src="#" alt="" class="img-fluid"> </img>
+					<img id ="temps_actuel" src="#" alt="" class="img-fluid"/> 
 					<table class="table table-dark table-striped table-sm table-bordered table-hover">
 						<thead>
 							<tr>
@@ -68,9 +68,11 @@
 				</div>
 			</section>
 			
-			<!-- Section 2 (Twitter) -->
-			<section class="row">
-				<div class="col-12">
+			<!-- Section 2-->
+			<section class="row justify-content-around">
+			
+				<!-- Twitter -->
+				<div class="col-12 col-md-4">
 					<h2> 
 						<span class="fa-stack fa-sm">
   							<i class="fa fa-square-o fa-stack-2x"></i>
@@ -78,124 +80,98 @@
 						</span>
 						On Twitter
 					</h2>
-					<a class="twitter-timeline" data-width="1500" data-height="500" data-theme="dark" href="https://twitter.com/F1?ref_src=twsrc%5Etfw">Tweets by F1</a> 
-					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<a class="twitter-timeline" data-width="1500" data-height="1000" data-theme="dark" href="https://twitter.com/F1?ref_src=twsrc%5Etfw">Tweets by F1</a> 
+					<script async src="https://platform.twitter.com/widgets.js"></script>
 				</div>
-			</section>
-			
-			<!-- Section 3 (Classements des pilotes) -->
-			<section class="row justify-content-around">
-			
-				<div class="col-12 table-responsive">
-					<h2> 
-						Pilots leaderboard
-						<span class="fa-stack fa-sm">
-  							<i class="fa fa-flag-checkered"></i>
-						</span>
-					</h2>
+				
+				<div id="conteneur" class="col-12 col-md-7">
+						<!-- Classements des pilotes -->
+						<div id="classement" class="col-12 table-responsive">
+							<h2> 
+								<span id="titre_classement"> Last race leaderboard </span>
+								<span class="fa-stack fa-sm">
+		  							<i class="fa fa-flag-checkered"></i>
+								</span>
+							</h2>
+							
+							<table class="table table-dark table-striped table-sm table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Pilot name</th>
+										<th>Grid</th>
+									</tr>
+								</thead>
+								<tbody id = "tableau_classement"> </tbody>
+							</table>
+						</div>
 					
-					<table class="table table-dark table-striped table-sm table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Name</th>
-								<th>Races won</th>
-								<th>Pole positions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>toto</td>
-								<td>15</td>
-								<td>12</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>titi</td>
-								<td>9</td>
-								<td>13</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>tata</td>
-								<td>7</td>
-								<td>10</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section>
-			
-			<!-- Section 4 (formulaire) -->
-			<section class="row">
-				<div class="col-12">
-					<h2> 
-						<span class="fa-stack fa-sm">
-  							<i class="fa fa-comment-o"></i>
-						</span>
-						Comments
-					</h2>
-					<form>
-						<div class="form-inline form-group">
-							<div class="form-group">
-								<label for="name" class="mr-3"> Name : </label>
-								<input id="name" type="text" class="form-control mr-3" required> </input>
-							</div>
-							<div class="form-group">
-								<label for="race" class="mr-3"> Race : </label>
-								<input id="race" type="text" class="form-control mr-3" required>  </input>
-							</div>
+						<!-- Formulaire -->
+						<div id="formulaire" class="col-12 table-responsive">
+							<h2> 
+								<span class="fa-stack fa-sm">
+		  							<i class="fa fa-comment-o"></i>
+								</span>
+								Add a comment
+							</h2>
+							<form>
+								<div class="form-inline form-group">
+									<div class="form-group">
+										<label for="name" class="mr-3"> Name : </label>
+										<input id="name" type="text" class="form-control mr-3" required/>
+									</div>
+									<div class="form-group">
+										<label for="race" class="mr-3"> Race : </label>
+										<input id="race" type="text" class="form-control mr-3" required/>  
+									</div>
+									
+								</div>
+								<div class="form-group">
+									<label for="comment"> Comment : </label>
+									<textarea id="comment" class="form-control"> Write your comment here... </textarea>
+								</div>
+								<button class="btn btn-outline-light"> Send </button>
+							</form>
 							
 						</div>
-						<div class="form-group">
-							<label for="comment"> Comment : </label>
-							<textarea id="comment" type="text" class="form-control"> Write your comment here... </textarea>
-						</div>
-						<!--<label for="select">Select : </label>
-						<select id="select" class="form-control">
-							<option>Option 1</option>
-							<option>Option 2</option>
-							<option>Option 3</option>
-						</select> -->
-						<button class="btn btn-outline-light"> Send </button>
-					</form>
 					
+						<!-- Commentaires -->
+						<div id="liste_commentaires" class="col-12 table-responsive">
+							<h2> 
+								<span class="fa-stack fa-sm">
+		  							<i class="fa fa-comments-o"></i>
+								</span>
+								Last comments 
+							</h2>
+							<ul class="list-unstyled">
+								<li class="media">
+									<a class="d-flex mr-3" href="#"></a>
+									<div class="media-body">
+						 				<h2 class="commentaire"> [Australian Grand Prix] John Smith wrote : </h2>
+						  				<p class="texte"> Just wonderful ! I've had a lot of fun watching this race. I hope the next year will be better. </p>
+									</div>
+						  		</li>
+						  		<li class="media">
+									<a class="d-flex mr-3" href="#"></a>
+									<div class="media-body">
+						 				<h2 class="commentaire"> [Australian Grand Prix] Marco Manza wrote : </h2>
+						  				<p class="texte"> My favourite pilot hasn't won... What a shame... </p>
+									</div>
+						  		</li>
+						  		<li class="media">
+									<a class="d-flex mr-3" href="#"></a>
+									<div class="media-body">
+						 				<h2 class="commentaire"> [Bahrein Grand Prix] Jean Dupont wrote : </h2>
+						  				<p class="texte"> It was a good moment with my family. However, the rain prevents me to make good photos... </p>
+									</div>
+						  		</li>
+							</ul>
+						</div>
 				</div>
 			</section>
-			
-			<!-- Section 5 (commentaires) -->
-			<section class="row">
-				<div id="liste_commentaires" class="col-12 table-responsive">
-					<h2> Last comments </h2>
-					<ul class="list-unstyled">
-						<li class="media">
-							<a class="d-flex mr-3" href="#"></a>
-							<div class="media-body">
-				 				<h2 class="commentaire"> [Australian Grand Prix] 2020-02-24 20:53 John Smith wrote : </h2>
-				  				<p class="texte"> Just wonderful ! I've had a lot of fun watching this race. I hope the next year will be better. </p>
-							</div>
-				  		</li>
-				  		<li class="media">
-							<a class="d-flex mr-3" href="#"></a>
-							<div class="media-body">
-				 				<h2 class="commentaire"> [Australian Grand Prix] 2020-02-12 02:18 Marco Manza wrote : </h2>
-				  				<p class="texte"> My favourite pilot hasn't won... What a shame... </p>
-							</div>
-				  		</li>
-				  		<li class="media">
-							<a class="d-flex mr-3" href="#"></a>
-							<div class="media-body">
-				 				<h2 class="commentaire"> [Bahrein Grand Prix] 2019-05-03 12:34 Jean Dupont wrote : </h2>
-				  				<p class="texte"> It was a good moment with my family. However, the rain prevents me to make good photos... </p>
-							</div>
-				  		</li>
-					</ul>
-				</div>
-    		</section>
-			
+				
 		</div>
 	
-	<script type="text/javascript" src="backend/apis_f1_meteo.js"></script>
+	<script src="backend/apis_f1_meteo.js"></script>
 	</body>
 </html>
