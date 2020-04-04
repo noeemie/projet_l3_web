@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title> Info Formule 1 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Adaptation pour Smartphones -->
+		<link rel="shortcut icon" type="image/png" href="../assets/logo.png" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- Chargement de Bootstrap sur CDN -->
+		<link rel="stylesheet" href="app.component.css"> <!-- Quelques personnalisations -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Chargement des icones -->
+	</head>
+	
+	<body>
+		<!-- Container de la page -->
+		<div class="container">
+		
+			<!-- En-tête -->
+			<header class="row justify-content-between">
+				<div class="col-12">
+					<h1 class="text-uppercase"> 
+						 <strong> Info </strong> <em> Formule 1 </em>
+					</h1>
+				</div>	
+			</header>
+		
+			<!-- Section 1 -->
+			<section class="row justify-content-around">
+			
+				<!-- Temps réel -->
+				<div class="col-12 col-sm-6 col-md-5 col-lg-4"> 
+					<h2> Actual weather </h2>
+					<img id ="temps_actuel" src="#" alt="" class="img-fluid"> 
+					<table class="table table-dark table-striped table-sm table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>Temp</th>
+								<th>Rain</th>
+								<th>Wind</th>
+							</tr>
+						</thead>
+						<tbody id = "temps"> </tbody>
+					</table>
+					<p id="heure_observation"> </p>
+				</div>
+				
+				<!-- Prévisions -->
+				<div class="col-12 col-sm-5 col-md-6 col-lg-7 table-responsive">
+					<h2> 
+						<span class="fa">
+							<i class="fa fa-thermometer-half"></i>
+						</span>
+						Forecasts 
+					</h2>
+					<table class="table table-dark table-striped table-sm table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Tmin</th>
+								<th>Tmax</th>
+								<th>Rain</th>
+								<th>Wind</th>
+							</tr>
+						</thead>
+						<tbody id = "previsions"> </tbody>
+					</table>
+				</div>
+			</section>
+			
+			<!-- Section 2 (Twitter) -->
+			<section class="row">
+				<div class="col-12">
+					<h2> 
+						<span class="fa-stack fa-sm">
+  							<i class="fa fa-square-o fa-stack-2x"></i>
+  							<i class="fa fa-twitter fa-stack-1x"></i>
+						</span>
+						On Twitter
+					</h2>
+					<a class="twitter-timeline" data-width="500" data-height="1500" data-theme="dark" href="https://twitter.com/F1?ref_src=twsrc%5Etfw">Tweets by F1</a> 
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</section>
+			
+			<!-- Section 3 (Classements des pilotes) -->
+			<section class="row justify-content-around">
+			
+				<div class="col-12 table-responsive">
+					<h2> 
+						Pilots leaderboard
+						<span class="fa-stack fa-sm">
+  							<i class="fa fa-flag-checkered"></i>
+						</span>
+					</h2>
+					
+					<table class="table table-dark table-striped table-sm table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Name</th>
+								<th>Races won</th>
+								<th>Pole positions won</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>toto</td>
+								<td>15</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>titi</td>
+								<td>9</td>
+								<td>13</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>tata</td>
+								<td>7</td>
+								<td>10</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			
+			<!-- Section 4 (formulaire) -->
+			<section class="row">
+				<div class="col-12">
+					<h2> 
+						<span class="fa-stack fa-sm">
+  							<i class="fa fa-comment-o"></i>
+						</span>
+						Comments
+					</h2>
+					<form>
+						<div class="form-inline form-group">
+							<div class="form-group">
+								<label for="name" class="mr-3"> Name : </label>
+								<input id="name" type="text" class="form-control mr-3" required> 
+							</div>
+							<div class="form-group">
+								<label for="race" class="mr-3"> Race : </label>
+								<input id="race" type="text" class="form-control mr-3" required>  
+							</div>
+							
+						</div>
+						<div class="form-group">
+							<label for="comment"> Comment : </label>
+							<textarea id="comment" type="text" class="form-control"> Write your comment here... </textarea>
+						</div>
+						<!--<label for="select">Select : </label>
+						<select id="select" class="form-control">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select> -->
+						<button class="btn btn-outline-light"> Send </button>
+					</form>
+					
+				</div>
+			</section>
+			
+		</div>
+	
+	<script type="text/javascript" src="api_meteo.js"></script>
+	</body>
+</html>
