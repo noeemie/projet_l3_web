@@ -1,0 +1,36 @@
+<!-- Container de la page -->
+<div class="container">
+	
+  <!-- En-tête -->
+  <app-titre></app-titre>
+  
+  <!-- Section 1 -->
+  <section class="row justify-content-around">
+  
+    <!-- Temps réel -->                   <!-- Prévisions -->
+   <app-meteo-jour-j></app-meteo-jour-j>  <app-meteo-cinq-j></app-meteo-cinq-j>
+    
+   
+    
+  </section>
+  
+  <!-- Section 2-->
+  <section class="row justify-content-around">
+    
+    <!-- Twitter -->
+    <app-twitter-api></app-twitter-api>
+
+    <div id="conteneur" class="col-12 col-md-6">
+  
+      <!-- Classements des pilotes -->
+        <app-results></app-results>
+      
+      <!-- Commentaires -->
+      <app-commentaires></app-commentaires>
+      
+      <!-- Formulaire -->
+      <app-formulaire></app-formulaire>
+
+    </div>
+  </section>    
+</div>

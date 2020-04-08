@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	padding-top : 10px;
+	background-image : url("Images/circuit.png");
+	background-repeat : no-repeat;
+	background-size : cover;
+}
+
+nav {
+	background-color : #343a40;
+}
+
+
+[class*="col"] {
+
+	color : white;
+	background-color : #343a40;
+	border : 5px solid red;
+	border-radius : 10px;
+	line-height : 20px;
+	text-align : center;
+	margin-top : 30px;
+}
+
+#conteneur {
+	background : transparent;
+	border : transparent;
+}
+
+strong {
+	color : #E00;
+}
+
+em {
+	font-size : 0.8em;
+	color : red;
+}
+
+.commentaire {
+	font-size : 0.8em;
+	text-align : left;
+}
+
+.texte {
+	margin-left : 30px;
+	text-align : justify;
+}
+
+#formulaire {
+	height : 300px;
+}
+
+#liste_commentaires {
+	height : 300px;
+}
+
+#classement {
+	height : 400px;
+}
+
+#meteoJourJ{
+	width: 400px;
+	height: 300px;
+}
+
+#meteo-5-jour{
+	width: 700px;
+	height: 300px;
+}
