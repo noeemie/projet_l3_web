@@ -6,7 +6,7 @@
       </span>
       Add a comment
     </h2>
-    <form >
+    <form [formGroup]="thingForm">
       <div class="form-inline form-group">
         <div class="form-group">
           <label for="name" class="mr-3"> Name : </label>
@@ -22,7 +22,7 @@
         <label for="comment"> Comment : </label>
         <textarea id="comment" class="form-control"> Write your comment here... </textarea>
       </div>
-      <button class="btn btn-outline-light"> Send </button>
+      <button class="btn btn-outline-light" (click)="onSubmit()"> Send </button>
     </form>
     
   </div>

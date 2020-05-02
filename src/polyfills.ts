@@ -55,9 +55,8 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-//remttre le deuxieme pack node modules
-import '/Users/farizonnoemie/Documents/Informatique/Projet_webl3/projet_l3_web/src/backend/app.js';
-import '/Users/farizonnoemie/Documents/Informatique/Projet_webl3/projet_l3_web/src/backend/serveur.js';
+//import '/Users/farizonnoemie/Documents/Informatique/Projet_webl3/projet_l3_web/src/backend/app.js';
+//import '/Users/farizonnoemie/Documents/Informatique/Projet_webl3/projet_l3_web/src/backend/serveur.js';
 import '/Users/farizonnoemie/Documents/Informatique/Projet_webl3/projet_l3_web/src/backend/apis_f1_meteo.js';
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 

@@ -3,6 +3,18 @@ const mongoose = require('mongoose');
 
 const Thing = require('./models/Thing');
 
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://noemie_farizon:<Chouquette72>@projetwebl3-ovih1.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true , useUnifiedTopology: true});
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   console.log('Connexion à MongoDB échouée !');
+//   client.close();
+// });
+
+
 // connection a ma base de données
 mongoose.connect('mongodb+srv://noemie_farizon:<Chouquette72>@projetwebl3-ovih1.mongodb.net/test?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -20,7 +32,7 @@ app.use((req, res, next) => {
 });
 
 // middlewear pour enregister un commentaire d'utilisateur
-app.post('/index', (req, res, next) => {
+app.use('/index', (req, res, next) => {
   const thing =  new Thing({
      ...req.body
   });
